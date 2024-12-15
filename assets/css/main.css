@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto Sans"),
+    url("~/assets/fonts/NotoSans-Regular.woff") format("woff"),
+    url("~/assets/fonts/NotoSans-Regular.woff2") format("woff2");
+}
