@@ -30,24 +30,6 @@ yarn dev
 bun run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
 Locally preview production build:
 
 ```bash
@@ -62,10 +44,3 @@ yarn preview
 
 # bun
 bun run preview
-```
-
-## Docs links:
-- **Nuxt 3**:`https://nuxt.com/docs/getting-started/introduction`
-- **Vue 3**: `https://vuejs.org/`
-- **Vuetify 3**: `https://vuetifyjs.com/en/`
-- **Pinia**: `https://pinia.vuejs.org/`
