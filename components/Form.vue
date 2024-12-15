@@ -67,8 +67,8 @@
           class="w-[185px] px-3 py-2 text-sm border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="TODO">TODO</option>
-          <option value="IN_PROGRESS">In Progress</option>
-          <option value="DONE">Done</option>
+          <option value="IN_PROGRESS">IN PROGRESS</option>
+          <option value="DONE">DONE</option>
         </Field>
         <ErrorMessage name="status" class="text-red-500 text-sm" />
       </div>
