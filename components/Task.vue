@@ -18,7 +18,7 @@
     </li>
     <Modal ref="modalRef">
       <template #content>
-        <Form :task="selectedTask" />
+        <Form :task="selectedTask" :closeTheModal="closeTheModal" />
       </template>
     </Modal>
   </div>
@@ -42,12 +42,15 @@ const selectedTask = ref<Task | undefined>(undefined);
 const deleteTask = () => {
   tasksStore.removeTask(props.task.id, props.status);
 };
-const openChildModal = () => {
+const opendModal = () => {
   modalRef.value?.openModal();
+};
+const closeTheModal = () => {
+  modalRef.value?.closeModal();
 };
 const editTask = () => {
   selectedTask.value = props.task;
-  openChildModal();
+  opendModal();
 };
 const priorityClass = computed(() => {
   switch (props.task.priority) {

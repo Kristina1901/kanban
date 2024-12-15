@@ -109,6 +109,10 @@ const props = defineProps({
     type: Object as PropType<Task>,
     default: null,
   },
+  closeTheModal: {
+    type: Function,
+    required: true,
+  },
 });
 const { addTask, updateTask, moveTask } = useTasksStore();
 const task = reactive<Task>({
@@ -148,6 +152,7 @@ const submit = (values: Partial<Task>) => {
     addTask(newTask, newTask.taskStatus);
     form.value?.resetForm();
   }
+  props.closeTheModal();
 };
 const generateId = () => Date.now().toString();
 const taskSchema = yup.object({

@@ -21,7 +21,7 @@
         />
       </ul>
       <button
-        @click="openChildModal"
+        @click="opendModal"
         class="py-2 w-full text-left flex items-center"
       >
         <PlusIcon class="h-5 w-5 text-gray-700" />
@@ -30,7 +30,7 @@
     </div>
     <Modal ref="modalRef">
       <template #content>
-        <Form :status="currentStatus" />
+        <Form :status="currentStatus" :closeTheModal="closeTheModal" />
       </template>
     </Modal>
   </div>
@@ -51,8 +51,11 @@ const draggedTask = ref<Task | null>(null);
 const draggedFromStatus = ref<TaskStatus | null>(null);
 const modalRef = ref();
 
-const openChildModal = () => {
+const opendModal = () => {
   modalRef.value?.openModal();
+};
+const closeTheModal = () => {
+  modalRef.value?.closeModal();
 };
 const onDragStart = (task: Task, status: TaskStatus) => {
   draggedTask.value = task;
