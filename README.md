@@ -1,23 +1,3 @@
-# Task Management App
-
-A task management application built using **Nuxt 3**, **Vue 3**, **Vuetify 3**, and **Pinia**. This app allows users to organize tasks into columns based on their status (e.g., TODO, In Progress, Done), drag and drop tasks between columns, and manage task details such as priority, assignees, and more.
-
-![Screenshot of Task Tracker](./screenshot.jpg)
-
-## Project Features
-
-- **Dynamic Task Management**: Add, edit, delete, and move tasks between columns.
-- **Drag-and-Drop**: Intuitive task reorganization using drag-and-drop functionality.
-- **Task Prioritization**: Assign priorities (High, Medium, Low) with visual indicators.
-- **State Management**: Powered by Pinia for efficient state handling.
-- **Custom Styling**: Designed with Vuetify 3 for a modern and clean UI.
-
----
-
-## Setup
-
-Make sure to install dependencies:
-
 ```bash
 # npm
 npm install
