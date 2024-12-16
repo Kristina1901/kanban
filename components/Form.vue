@@ -125,21 +125,6 @@ const task = reactive<Task>({
   priority: props.task?.priority || TaskPriority.LOW,
 });
 const form = ref<InstanceType<typeof Form> | null>(null);
-watch(
-  () => props.task,
-  (newTask) => {
-    if (newTask) {
-      task.id = newTask.id;
-      task.title = newTask.title;
-      task.description = newTask.description;
-      task.responsiblePerson = newTask.responsiblePerson;
-      task.executors = newTask.executors;
-      task.taskStatus = newTask.taskStatus;
-      task.priority = newTask.priority;
-    }
-  },
-  { immediate: true }
-);
 const submit = (values: Partial<Task>) => {
   if (props.task && props.task.id) {
     const updatedTask: Task = { ...task, ...values };
